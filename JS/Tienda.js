@@ -267,7 +267,11 @@ const showHTML = () => {
     rowProduct.innerHTML = ''
 
     //esto nos permite agregar el producto al almacenamiento
-    allProducts = JSON.parse(localStorage.getItem('todo'))
+    if( JSON.parse(localStorage.getItem('todo')) == null){
+
+    }else{
+        allProducts = JSON.parse(localStorage.getItem('todo'))
+    }
     saveTodo()
 
 
